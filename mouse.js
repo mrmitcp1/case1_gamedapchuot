@@ -11,6 +11,7 @@ let audio2=document.getElementById('audio2')
 let audio3 = document.getElementById('audio3')
 
 function play() {
+    document.getElementById('highScore').innerHTML = `HighScore : ${highScore}`
     intervalCountDown = setInterval(countDown, 1000)
     audio3.play()
 
@@ -24,8 +25,10 @@ function play() {
 
     if (score >= 10) {
         interval = setInterval(randomMouse, 1000)
-    } else
-        interval = setInterval(randomMouse, 2000)
+    } else if (score >=20){
+        interval = setInterval(randomMouse,500)
+    }else interval = setInterval(randomMouse, 2000)
+
 
 }
 
