@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .table123 {
+            background-image: url("/images/background.png");
+
+        }
+
+        body {
+            background-image: url("https://png.pngtree.com/background/20230303/original/pngtree-d-game-art-natural-landscape-for-games-mobile-applications-and-computers-picture-image_2076743.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .container, .table123 {
+            margin: 50px auto;
+        }
+
+        .btn1 {
+            font-family: Mali;
+            background-color: #9929ab;
+            color: black;
+            border: 2px solid #DC143C;
+            font-size: 200%;
+            border-radius: 15px;
+            width: 200px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            position: absolute;
+            top: 15%;
+            left: 25%
+
+        }
+
+
+        .btn2 {
+            font-family: Mali;
+            background-color: #da8a06;
+            color: black;
+            border: 2px solid #DC143C;
+            font-size: 200%;
+            border-radius: 15px;
+            width: 200px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            position: absolute;
+            top: 15%;
+            left: 60%
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<h1 style='text-align: center; font-family: "Baloo Thambi 2"'>Game Đập Chuột</h1>
+<br>
+<button onclick="play()" style="" class="btn1">PLAY</button>
+<button onclick="reset()" style="" class="btn2">STOP</button>
+<h2 id="score" style="text-align: center; color: rgba(236,213,213,0.89) ;font-family: 'American Typewriter' ">Score</h2>
+<h2 id="highScore" style="text-align: center; color: rgba(236,213,213,0.89) ;font-family: 'American Typewriter'">
+    HighScore</h2>
+<div id="timer" style="position: absolute; top: 25%; left: 70%; font-size: 60px; color: navy;font-family: 'YuKyokasho Yoko'">1:00</div>
+<div class="container">
+    <table style="color: chartreuse;  " class="table123" id="table">
+        <tr>
+            <td style="height: 150px; width: 300px; text-align: center " id="id1"></td>
+            <td style="height: 150px; width: 300px; text-align: center" id="id2"></td>
+            <td style="height: 150px; width: 300px; text-align: center" id="id3"></td>
+
+        </tr>
+        <tr>
+            <td style="height: 150px; width: 300px; text-align: center" id="id4"></td>
+            <td style="height: 150px; width: 300px; text-align: center" id="id5"></td>
+            <td style="height: 150px; width: 300px; text-align: center" id="id6"></td>
+
+        </tr>
+        <tr>
+            <td style="height: 150px; width: 300px; text-align: center" id="id7"></td>
+            <td style="height: 150px; width: 300px; text-align: center" id="id8"></td>
+            <td style="height: 150px; width: 300px; text-align: center" id="id9"></td>
+        </tr>
+    </table>
+</div>
+<audio id="audio" hidden="">
+    <source src="audio/gau.mp3">
+</audio>
+<audio id="audio1" hidden=""> <source src="audio/end.mp3"></audio>
+<audio id="audio2" hidden=""> <source src="audio/demnugoc.mp3"></audio>
+<audio src="audio/intro.mp3" id="audio3" hidden=""></audio>
+</body>
+</html>
+<script src="hole.js"></script>
+<script src="mouse.js"></script>
