@@ -6,8 +6,8 @@ let highScore = localStorage.getItem('highScore') || 0
 let timer = document.getElementById('timer')
 let time = 60
 let audio = document.getElementById("audio")
-let audio1= document.getElementById('audio1')
-let audio2=document.getElementById('audio2')
+let audio1 = document.getElementById('audio1')
+let audio2 = document.getElementById('audio2')
 let audio3 = document.getElementById('audio3')
 let check_play = false;
 let check_stop = true;
@@ -21,7 +21,7 @@ function play() {
 
         function randomMouse() {
             let randomImg = Math.floor(Math.random() * 9)
-            td[randomImg].innerHTML = `<img src="images/mole_1.png" height="70" width="60" id="mole1"/>`;
+            td[randomImg].innerHTML = `<img src="images/home.png" height="100" width="80" id="mole1"/>`;
             setTimeout(() => {
                 td[randomImg].innerHTML = ''
             }, 1000)
@@ -36,11 +36,12 @@ function play() {
         check_stop = false;
     }
 }
+
 function reset() {
     if (!check_stop && check_play) {
         clearInterval(interval);
         audio3.pause()
-        audio3.currentTime=0
+        audio3.currentTime = 0
         score = 0;
         document.getElementById('highScore').innerHTML = `HighScore : ${highScore}`
         document.getElementById('score').innerHTML = `Score : ${score}`
@@ -55,8 +56,8 @@ function handleClick(event) {
     let cell = event.target
 
     if (cell.querySelector('img')) {
-        cell.innerHTML = `<img src="images/mole_laugh2.png" height="70" width="60" id="mole2" />`
-        setTimeout( ()=>{
+        cell.innerHTML = `<img src="images/home1.png" height="100" width="80" id="mole2" />`
+        setTimeout(() => {
             audio.play()
         }, 1000)
         score++
@@ -78,13 +79,12 @@ for (let i = 0; i < td.length; i++) {
 }
 
 
-
 function countDown() {
     if (!check_stop && check_play) {
         time--
         let minutes = Math.floor(time / 60)
         let seconds = time % 60
-        if (seconds<11){
+        if (seconds < 11) {
             audio2.play()
         }
         if (seconds < 10) {
@@ -97,7 +97,7 @@ function countDown() {
             clearInterval(intervalCountDown)
             table.innerHTML = `<img src="images/end3.png" height="477" width="1000"/>`
 
-            setTimeout(()=>{
+            setTimeout(() => {
 
                 location.reload();
             }, 5000)
